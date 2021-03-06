@@ -1,0 +1,9 @@
+/node_modules
+.env
+/models/Users.ts
+/routes/
+index.js
+
+
+TODO: crear imagen de docker y levantar contenedor
+guia : https://www.digitalocean.com/community/tutorials/how-to-build-a-node-js-application-with-docker-quickstart-es
