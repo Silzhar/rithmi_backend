@@ -3,6 +3,7 @@ require('./config/db.js')
 
 const express = require('express')
 const session = require('express-session')
+const cors = require('cors')
 
 const MongoStore = require('connect-mongo')(session)
 const mongoose = require('mongoose')
@@ -11,6 +12,10 @@ const passport = require('./config/passport')
 const userRoute = require('./routes/user.auth.routes')
 
 const server = express()
+server.use(cors( {
+  origin: true,
+  credentials : true
+ }))
 server.use(express.json())
 server.use(express.urlencoded({ extended: false }))
 
